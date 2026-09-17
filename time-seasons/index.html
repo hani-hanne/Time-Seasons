@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The World of Time & Seasons</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="game-shell">
+
+    <!-- ==================== HOME ==================== -->
+    <section id="homeScreen" class="screen active">
+
+      <div class="home-art" aria-hidden="true">
+        <div class="sun-doodle">☼</div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+
+        <div class="home-clock">
+          <span class="clock-hand minute-hand"></span>
+          <span class="clock-hand second-hand"></span>
+          <span class="clock-center"></span>
+        </div>
+
+        <span class="floating-symbol symbol-one">✦</span>
+        <span class="floating-symbol symbol-two">🍂</span>
+        <span class="floating-symbol symbol-three">🌱</span>
+      </div>
+
+      <p class="eyebrow">A little journey through time</p>
+
+      <h1>
+        The World of<br>
+        <span>Time & Seasons</span>
+      </h1>
+
+      <p class="home-thai">
+        โลกของนาฬิกาและสีของฤดู
+      </p>
+
+      <p class="home-description">
+        ถ้าคุณได้เกิดใหม่ในโลกแห่งเวลา<br>
+        คุณจะเป็นอะไร?
+      </p>
+
+      <button id="startButton" class="main-button">
+        เริ่มต้นการเดินทาง
+        <span>→</span>
+      </button>
+
+      <p class="small-note">
+        ไม่มีคำตอบที่ผิด มีเพียงเรื่องราวของคุณ
+      </p>
+
+    </section>
+
+
+    <!-- ==================== QUIZ ==================== -->
+    <section id="quizScreen" class="screen">
+
+      <header class="quiz-header">
+
+        <button id="backButton" class="text-button">
+          ← กลับ
+        </button>
+
+        <div class="quiz-title">
+          <span>THE WORLD OF TIME</span>
+          <small>คำถามจากโลกของเวลา</small>
+        </div>
+
+        <div class="question-number">
+          <span id="currentNumber">01</span>
+          <span>/ 10</span>
+        </div>
+
+      </header>
+
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+
+      <div class="question-area">
+
+        <p id="questionSeason" class="question-season">
+          🌸 ฤดูใบไม้ผลิ
+        </p>
+
+        <div class="question-art" id="questionArt">
+          <div class="art-moon"></div>
+          <div class="art-star star-a">✦</div>
+          <div class="art-star star-b">✧</div>
+          <div class="art-ground"></div>
+        </div>
+
+        <p id="questionChapter" class="question-chapter">
+          บทที่ 01 · การเริ่มต้น
+        </p>
+
+        <h2 id="questionText">
+          หากคุณสามารถหยุดเวลาไว้ได้หนึ่งช่วงเวลา...
+        </h2>
+
+        <p class="question-hint">
+          เลือกคำตอบที่ใกล้เคียงความรู้สึกของคุณที่สุด
+        </p>
+
+      </div>
+
+
+      <div id="answersContainer" class="answers-container">
+        <!-- JavaScript จะสร้างคำตอบตรงนี้ -->
+      </div>
+
+
+      <div class="quiz-footer">
+        <p id="questionHint">คำถามที่ 1 จาก 10</p>
+        <span>✦</span>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== RESULT ==================== -->
+    <section id="resultScreen" class="screen">
+
+      <p class="eyebrow">Your little story</p>
+
+      <h2 class="result-heading">
+        คุณเกิดใหม่เป็น...
+      </h2>
+
+      <div id="resultCard" class="result-card">
+
+        <div class="result-card-top">
+          <span id="resultSeason" class="result-season">
+            🍂 ฤดูใบไม้ร่วง
+          </span>
+
+          <span class="result-card-number">
+            NO. 01
+          </span>
+        </div>
+
+        <div id="resultIllustration" class="result-illustration">
+          <div class="placeholder-character">
+            <span>✦</span>
+          </div>
+        </div>
+
+        <div class="result-card-bottom">
+
+          <p id="resultEnglishName" class="result-english-name">
+            The Falling Leaf
+          </p>
+
+          <h3 id="resultName">
+            ใบไม้ร่วง
+          </h3>
+
+          <p id="resultTagline" class="result-tagline">
+            การยอมรับและการเปลี่ยนแปลง
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="result-content">
+
+        <div class="content-label">
+          <span>✦</span>
+          เรื่องราวของคุณ
+        </div>
+
+        <p id="resultStory" class="result-story"></p>
+
+        <div class="content-label">
+          <span>✦</span>
+          สิ่งที่ตัวละครนี้บอกคุณ
+        </div>
+
+        <p id="resultMeaning" class="result-meaning"></p>
+
+      </div>
+
+
+      <div class="result-actions">
+
+        <button id="restartButton" class="main-button">
+          เริ่มการเดินทางอีกครั้ง
+          <span>↻</span>
+        </button>
+
+        <button id="shareButton" class="secondary-button">
+          คัดลอกผลลัพธ์
+        </button>
+
+      </div>
+
+      <p id="shareMessage" class="share-message"></p>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    The World of Time & Seasons · A little story about you
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
